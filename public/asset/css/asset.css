@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Dancing+Script:wght@400;500&family=Inter:wght@400;600;700;800;900&family=Rouge+Script&family=Tienne:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tienne', serif;
+
+}
+
+.clearfix{
+    content: "";
+    width: 100%;
+    height: 100%;
+    
+    
+    
+}
+/* .bgc1{
+    background: url(/assets/img/bannerandmenubgc.jpg) center no-repeat;
+    padding-bottom: -50px;
+    content: "";
+    
+    
+    
+    
+
+    
+} */
+
+.imgbg{
+    margin-top: -60px;
+    
+}
+/* .newig{
+    position: absolute;
+    animation: animate 1s ease infinite alternate;
+    transition: all 0.3s ease;
+
+} */
+
+/* .navbar{
+    margin-top: 30px;
+} */
+
+.mya {
+    color: #8d92bb !important;
+    text-shadow: 2px 2px 5px;
+}
+.imagebgc{
+    padding: 100px;
+}
+
+
+.navbar-brand img {
+    width: 40%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 997;
+    
+    
+}
+.header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s;
+    
+}
+.logo {
+   width: 20%;
+   position: relative;
+   animation: logo 1s ease-in-out 1;
+}
+@keyframes logo {
+    0% {
+        left: -30%;
+    }
+    80% {
+        left: 2%;
+    }
+    90% {
+        left: -1%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+.logo img {
+    transition: all ease-out .3s;
+}
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+header {
+    box-shadow: 0px 10px 20px #fff;
+    overflow: hidden;
+
+
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+::selection {
+    background: #000;
+    color: rgb(31, 28, 28);
+}
+
+
+.navbar {
+    position: relative;
+    animation: menuBar 1s ease-in-out 1;
+}
+@keyframes menuBar {
+    0%{
+        top: -60px;
+    }
+    80%{
+        top: 20px;
+    }
+    90%{
+        top: -10px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+.navbar ul {
+    display: flex;
+    margin: 0;
+}
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a {
+    padding: 10px 0 10px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    color: #8d92bb;
+    text-shadow: 2px 2px 5px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.navbar ul li a:hover {
+    color: rgb(15, 14, 14);
+}
+/* .image2{
+    margin-top: 30px;
+
+} */
+
+
+@keyframes button {
+    0%{
+        left: 75%;
+    }
+    80%{
+        right: 10%;
+    }
+    90%{
+        right: -2%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+/* @keyframes newig{
+    0%{
+        width: 100%;
+        height: auto;
+    }
+    80%{
+        width: 100%;
+        height: auto;
+    }
+    90%{
+        width: 100%;
+        height: auto;
+    }
+    100%{
+        right: 0%;
+    }
+    
+
+} */
+.button a {
+    color: #27a776;
+    padding-left: 15px;
+    transition: .3s ease;
+}
+.button a:hover {
+    color: #fff;
+
+}
+.imgbg{
+    content: "";
+    
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-right: 50px;
+    text-align: center;
+    
+}
+.newig{
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: animate 1s ease infinite alternate;
+    transition: all 0.3s ease;
+    margin-left: 300px;
+    margin-top: -50px;
+}
+@keyframes animate {
+    0% {top: -40px;}
+    100% {top: -10px;}
+}
+.package a{
+    padding: 10px;
+    
+
+}
+.boltt{
+    margin-top: 10px;
+}
+.all1{
+    background: #edf0f4;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 30px;
+}
+.all1:hover{
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+    box-shadow: 5px 5px 5px white;
+
+}
+.footer{
+    background: #495f57;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    color: #B2BABB;
+    box-shadow: 5px 1px 5px black;
+    font-size: 10px;
+}
+.myfooter{
+    margin-top: 70px;
+    
+}

@@ -1,0 +1,5 @@
+admin-username: expressdb
+admin-password: ArifMahamud
+
+
+mongodb+srv://adminexpress:8sX5ruyGiscOTpya@expressjs.ruclfye.mongodb.net/mydata?retryWrites=true&w=majority

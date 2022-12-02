@@ -1,0 +1,91 @@
+.body{
+    background-color: #F3F6F9;
+    padding: 15px;
+    
+}
+
+.nav{
+    font-size: 25px;
+    
+    color: black;
+    font-weight: 400;
+    
+}
+.nav:hover{
+    color: aqua;
+}
+.nav a{
+    margin-right: 30px;
+    color: black;
+    
+}
+.menubar{
+    color: black;
+}
+.logo{
+    font-size: 25px;
+}
+.banner1{
+    background: url(./img/banner\ 1\ -\ Copy.jpg) center center no-repeat;
+    padding: 150px;
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+    
+    
+}
+.com{
+    font-size: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 0 10px 0 10px;
+    color: #F3F6F9;
+    
+}
+.any{
+    margin-top: -50px;
+}
+/* .button{
+    margin-top: 50px;
+    
+} */
+.btn{
+    margin-right: 100px;
+}
+.package{
+    padding: 40px;
+    margin: 20px;
+    
+    
+}
+.one{
+    padding: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    
+    background: #EFF4F9;
+}
+.mobilelogo{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    /* margin-left: -95px; */
+    color: #82B8ED;
+}
+.packageinfo{
+    text-align: center;
+    padding-top: 20px;
+}
+.write b{
+    font-size: 20px;
+}
+.mobileimg{
+    
+    text-align: center;
+}
+.image{
+    box-shadow: 10px 10px 10px black;
+    
+}
+
+
