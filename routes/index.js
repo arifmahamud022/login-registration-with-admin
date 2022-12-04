@@ -3,9 +3,13 @@ var router = express.Router();
 
 const { islogin,isAdmin } = require('../config/auth')
 
+
+
+
 /* GET home page. */
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' ,user: req.user});
+  res.render('index', {  title: 'Express',user: req.user});
 });
 
 router.get('/login', function(req, res, next) {

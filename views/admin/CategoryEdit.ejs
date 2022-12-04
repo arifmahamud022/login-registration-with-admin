@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <%= baseUrl %>
+        
+        <meta charset="utf-8" />
+        <title>Dashboard|Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        
+        <!-- jvectormap -->
+        <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body data-sidebar="dark">
+    
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            
+            <%- include('adminheader'); -%>
+
+             <!-- start page title -->
+             <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0">Blankl Page</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Upzet</a></li>
+                                            <li class="breadcrumb-item active">Blankl Page</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <!-- start row -->
+                        <div class="row">
+
+                            <div class="col-12  d-flex justify-content-center">
+                                <% if(flashsms == ''){ }else{ %>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                    <strong><%= flashsms %></strong>
+                                </div>
+                                <% }; %>
+                                <% if(flasherr == ''){ }else{ %>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                    <strong> <%= flasherr %></strong>
+                                </div>
+                                <% }; %>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <% if(errors){ errors.forEach(function(error){ %>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                    <strong><%= error.msg %></strong>
+                                </div>
+                                <% }); }; %>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <form class="card-body" action="/admin/category-update" method="post">
+                                        <input type="hidden" name="id" value="<%= category._id %>">
+                                        <div class="mb-3 row">
+                                            <label for="name" class="col-md-2 col-form-label">Title</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" value="<%= category.title %>"
+                                                    name="title">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-md-2 col-form-label">Parent Category</label>
+                                            <div class="col-md-10">
+                                                <select class="form-select" name="parent_cat">
+                                                    <option value="">Selecte Parent Category</option>
+                                                    <% if(categoryList){ categoryList.forEach(function(cat){ %>
+                                                    <option value="<%= cat._id %>"
+                                                        <% if(category.parent_cat == cat._id){ %> selected <% } %>>
+                                                        <%= cat.title %></option>
+                                                    <% });  }; %>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label for="username" class="col-md-2 col-form-label">SEO
+                                                Description</label>
+                                            <div class="col-md-10">
+                                                <textarea id="seo_description" name="seo_description"
+                                                    class="form-control" maxlength="225" rows="3"
+                                                    placeholder="This seo description has a limit of 130 chars."
+                                                    spellcheck="false"><%= category.seo_description %></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label for="email" class="col-md-2 col-form-label">SEO Keywords</label>
+                                            <div class="col-md-10">
+                                                <textarea id="seo_keywords" name="seo_keywords" class="form-control"
+                                                    maxlength="225" rows="3"
+                                                    placeholder="This seo keywords has a limit of 150 chars."
+                                                    spellcheck="false"><%= category.seo_description %></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+            </div>
+            <!-- end page title -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <%- include('leftsidebar'); -%>
+            <!-- Left Sidebar End -->
+            
+
+            
+                    
+
+            
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+
+            
+
+
+
+           
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right Sidebar -->
+        <%- include('rightsidebar'); -%>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts js -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <!-- jquery.vectormap map -->
+        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+        <%- include('adminfooter'); -%>
+
+    </body>
+</html>
